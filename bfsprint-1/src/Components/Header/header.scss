@@ -1,0 +1,42 @@
+@mixin upload-button {
+    background-color: #0095ff;
+    color: white;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+}
+
+@mixin profile-image {
+    //background-image: url(/src/Assets/images/Mohan-muruge.jpg);
+    background-color: black;
+    border-radius: 3rem;
+    margin: 1rem;
+    border: none;
+    height: 40px;
+    width: 40px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: #fafafa;
+
+    &__search-bar {
+        border: 2px #e1e1e1 solid;
+        border-radius: 0.5rem;
+        width: 80vw;
+        height: 50px;
+    }
+
+    &__upload-button {
+    @include upload-button();
+    }
+
+    &__profile-image {
+        @include profile-image();
+    }
+    
+}
