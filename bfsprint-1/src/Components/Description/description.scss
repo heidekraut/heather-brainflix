@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'avenier-bold';
+    src: url('/src/Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Bold.ttf');
+}
+
+@font-face {
+    font-family: 'avenier-reg';
+    src: url('/src/Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf');
+}
+
+@mixin doc-title {
+   // font-family: 'avenier-bold';
+   font-size: 2.5rem;
+   text-align: left;
+}
+
+@mixin subtitle {
+   // font-family: 'avenier-reg';
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+@mixin bodytext {
+    // font-family: 'avenier-reg';
+    font-size: 16px;
+    text-align: left;
+}
+
+
+
+.description {
+     margin: 1rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+
+     &__title {
+         @include doc-title();
+     }
+
+     &__byline {
+        @include subtitle();
+     }
+
+     &__paragraph {
+        @include bodytext();
+     }
+
+}
+

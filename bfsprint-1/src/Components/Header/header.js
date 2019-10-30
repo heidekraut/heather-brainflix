@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './header.scss';
-import logo from  '../../Assets/icons/SVG/Icon-likes.svg'
+import Logo from  '../../Assets/icons/SVG/Icon-likes.svg';
 
 export class Header extends Component {
     render() {
@@ -9,7 +9,7 @@ export class Header extends Component {
 
                     {/* <Logo/> */}
                     <div className="header__search-bar">
-                        <img src="..."></img>
+                        <img src=".."></img>
                         <span className="header__search-txt">Search</span>
                     </div>
                         <button className="header__upload-button">Upload</button>
