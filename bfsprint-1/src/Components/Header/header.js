@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import './header.scss';
-import Logo from  '../../Assets/icons/SVG/Icon-likes.svg';
+import Logo from  '../../Assets/logos/Logo-brainflix.svg'
 
 export class Header extends Component {
     render() {
         return (
             <header className="header">
 
-                    {/* <Logo/> */}
+                <img src={Logo} alt="logo"></img>
                     <div className="header__search-bar">
-                        <img src=".."></img>
                         <span className="header__search-txt">Search</span>
                     </div>
                         <button className="header__upload-button">Upload</button>
