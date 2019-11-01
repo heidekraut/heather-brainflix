@@ -1,3 +1,4 @@
+
 // Side Video Object
 import image1 from '../../Assets/images/video-list-1.jpg';
 import image2 from '../../Assets/images/video-list-2.jpg';
@@ -8,7 +9,8 @@ import image6 from '../../Assets/images/video-list-6.jpg';
 //import image7 from '../../Assets/images/video-list-7.jpg';
 import image8 from '../../Assets/images/video-list-8.jpg';
 
-const sideVideo = [
+
+const videoList = [
     {
     id: '001', 
     title: 'Become a Travel Pro In One Easy Lesson', 
@@ -54,17 +56,6 @@ const sideVideo = [
 
 ];
 
-//Main Video Object
-const mainVideo = {
-    id: '008',
-    title: 'BMX Rampage',
-    description: 'On a gusty day in Southern Utah a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments that sports has ever seen. While mother nature only allowed for one full run before it became impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time, eight years after his Red Cow Rampage record.',
-    channel: 'Red Cow',
-    image: 'type of <string>',
-    views: '1,001,023',
-    likes: '110,985',
-    duration: '0:42',
-    video: '?',
-    timestamp: '12/18/2018',
-    comments: '3 Comments' 
-};
+
+export default videoList
+

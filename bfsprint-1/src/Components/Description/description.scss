@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'avenier-bold';
-    src: url('/src/Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Bold.ttf');
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Heavy.ttf');
 }
 
 @font-face {
     font-family: 'avenier-reg';
-    src: url('/src/Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf');
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf');
 }
 
 @mixin doc-title {
-   // font-family: 'avenier-bold';
+   font-family: 'avenier-bold';
    font-size: 2.5rem;
    text-align: left;
 }
 
 @mixin subtitle {
-   // font-family: 'avenier-reg';
+   font-family: 'avenier-reg';
     font-size: 1.25rem;
     text-align: left;
 }
 
 @mixin bodytext {
-    // font-family: 'avenier-reg';
+    font-family: 'avenier-reg';
     font-size: 16px;
     text-align: left;
 }
