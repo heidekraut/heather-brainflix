@@ -1,5 +1,6 @@
 
 // Side Video Object
+import image0 from '../../Assets/images/video-list-0.jpg';
 import image1 from '../../Assets/images/video-list-1.jpg';
 import image2 from '../../Assets/images/video-list-2.jpg';
 import image3 from '../../Assets/images/video-list-3.jpg';
@@ -11,6 +12,12 @@ import image8 from '../../Assets/images/video-list-8.jpg';
 
 
 const videoList = [
+    {
+        id: '000', 
+        title: 'BMX Rampage: 2018 Hightlights', 
+        channel: 'Red Cow', 
+        image: image0
+    },
     {
     id: '001', 
     title: 'Become a Travel Pro In One Easy Lesson', 

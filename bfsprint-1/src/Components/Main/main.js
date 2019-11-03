@@ -20,9 +20,9 @@ export class Main extends Component {
                 <Header/>
                 <Video mainVideo={this.state.mainvideo}/>
                 <div className='main-content-container'>
-                <Description/>
+                <Description mainVideo={this.state.mainvideo}/>
                 <Comments />
-                <Aside video={this.state.videos}/>
+                <Aside videos={this.state.videos} mainVideo={this.state.mainvideo}/>
                 </div>
             </div>
         )

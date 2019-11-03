@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
-// import '../Aside/aside.scss';
 import './aside.scss'
-// import videoList from '../../Components/Main/data';
 
 
 export class Aside extends Component {
     render() {
-        console.log(this.props);
+        
+       console.log(this.props.videos)
+        // const filteredItems = items.slice(0, i).concat(items.slice(i + 1, items.length))
         
         return (
                 <section className="video-list">
+                <h3 className="video-list__next-video">Next Video</h3>
                     {
-                    this.props.video.map((video) => {
+                    this.props.videos.filter((item) => {
+                       return item.id !== this.props.mainVideo.id
+                    })
+                        .map((video) => {
                         return <div className='video-list__container' key={video.id} >
                             <img className='video-list__image' src={video.image} />
                                 <div className='video-list__info-container'>

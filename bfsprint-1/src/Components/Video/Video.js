@@ -4,15 +4,15 @@ import './video.scss';
 
 export class Video extends Component {
     render() {
-        console.log(this.props.mainVideo.image0);
+
         return (
-            <div>
-                <img src={mainVideo.image0} className="video" alt='bmx kids' />
-            </div>
+            <section className='main-video'>
+                <video poster={this.props.mainVideo.image} className="main-video__video" alt='bmx kids'>
+                </video>
+            </section>
         )
     }
 }
 
 export default Video
 
-console.log(mainVideo)

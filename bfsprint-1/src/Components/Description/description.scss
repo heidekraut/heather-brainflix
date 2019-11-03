@@ -24,6 +24,9 @@
     font-family: 'avenier-reg';
     font-size: 16px;
     text-align: left;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+    color: #323232;
 }
 
 
@@ -38,8 +41,49 @@
          @include doc-title();
      }
 
+     &__video-info {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         border-bottom: 1px solid #AFAFAF;
+
+     }
+    
+     &__byline-date-container {
+         display: flex;
+         margin: 1rem 0rem;
+         width: 220px;
+     }
+
      &__byline {
         @include subtitle();
+     }
+
+     &__date {
+        color: #AFAFAF;
+        margin-left: 1rem;
+        align-self: center;
+        font-size: 18px;
+     }
+
+     &__social-container {
+         display: flex;
+         padding: 1.5rem 0rem;
+         margin: 0.25rem 0rem;
+         width: 220px;
+     }
+
+     &__views-container, &__likes-container {
+         margin-right: 1rem;
+         font-family: 'avenier-reg';
+         color: #AFAFAF;
+         display: flex;
+     }
+
+     &__views, &__likes {
+         margin-left: 0.5rem;
+         height: 20px;
      }
 
      &__paragraph {
