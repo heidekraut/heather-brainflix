@@ -38,7 +38,6 @@ $mobile-size: (max-width: $mobile-max);
 $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 
 
-
 @media screen and (max-width: $mobile-max){
 
     .video-list { 
@@ -82,13 +81,20 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 }
 }
 
-@media screen and (min-width: $mobile-max) and (max-width: $tablet-max) {
-
     .video-list {
         display:flex;
         flex-direction: column;
         width: 25rem;
 
+        &__next-video {
+            text-align: left;
+            margin: 2rem 1rem;
+            text-transform: uppercase;
+            font-family: 'avenier-reg';
+            letter-spacing: 0.5px;
+            color: #afafaf;
+            font-size: 16px;
+        }
 
         &__container {
             display: flex;
@@ -116,8 +122,24 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
             border-radius: 0.5rem;
         }
 
-
-
     }
 
-}
+
+    @media screen and (min-width: $tablet-max) {
+        .video-list {
+
+            width: 20rem;
+            z-index: 1;
+            align-self: flex-end;
+
+            &__image {
+                width: 120px;
+                height: 80px;
+                border-radius: 0.5rem;
+            }
+
+    }
+    }
+
+
+

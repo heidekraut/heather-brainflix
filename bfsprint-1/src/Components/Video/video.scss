@@ -21,7 +21,7 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 }
 
 
-   @media screen and (max-width: $tablet-max) and (min-width: $mobile-max) {
+   @media screen and (min-width: $mobile-max) {
 
     .main-video {
         width: 100vw;

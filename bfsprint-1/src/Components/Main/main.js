@@ -6,6 +6,7 @@ import Aside from '../Aside/aside';
 import videoList from '../Main/data';
 import Comments from '../Comments/comments';
 import mainVideo from './data-main-vid';
+import './main.scss';
 
 export class Main extends Component {
     state = {
@@ -20,9 +21,11 @@ export class Main extends Component {
                 <Header/>
                 <Video mainVideo={this.state.mainvideo}/>
                 <div className='main-content-container'>
-                <Description mainVideo={this.state.mainvideo}/>
-                <Comments />
-                <Aside videos={this.state.videos} mainVideo={this.state.mainvideo}/>
+                    <div className='main-content-container__description-comments'>
+                        <Description mainVideo={this.state.mainvideo}/>
+                        <Comments />
+                    </div>
+                    <Aside videos={this.state.videos} mainVideo={this.state.mainvideo}/>
                 </div>
             </div>
         )
