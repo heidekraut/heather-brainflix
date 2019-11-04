@@ -6,7 +6,7 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 
 
 
-@media screen and (min-width: $tablet-max) {
+@media screen and (min-width: 1024px) {
 
     .main-content-container {
         display: flex;
@@ -16,6 +16,7 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
         &__description-comments {
             flex-grow: 1;
         }
+
     }
 
 }

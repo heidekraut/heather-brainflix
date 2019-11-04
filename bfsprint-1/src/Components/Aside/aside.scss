@@ -128,7 +128,8 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
     @media screen and (min-width: $tablet-max) {
         .video-list {
 
-            width: 20rem;
+            min-width: 22rem;
+            max-width: 50rem;
             z-index: 1;
             align-self: flex-start;
             border-left: 1px solid #afafaf;

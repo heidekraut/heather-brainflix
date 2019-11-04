@@ -61,6 +61,12 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
         padding-bottom: 2rem;
         border-bottom: 1px solid #e1e1e1;
 
+        @media screen and (min-width: $tablet-max){
+            .commentsform{
+            width: 600px;
+            }
+        }
+
     &__profile-image-large {
         border-radius: 50%;
         width: 50px;
@@ -105,9 +111,7 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
         padding: 1rem;
     }
 
-    }
-
-    
+}
 
 
 .comments {
@@ -140,6 +144,10 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: 307px;
+        
+        @media screen and (min-width: $tablet-size) {
+         width: 40vw; 
+    }
     }
 
     &__user-name {
@@ -153,14 +161,12 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
     }
 
 
-
-
     @media screen and (min-width: $mobile-max) and (max-width: $tablet-max) {
         width: 575px;
         flex-wrap: wrap;
 
         &__words {
-            max-width: 650px;
+            max-width: 445px;
         } 
 
     }

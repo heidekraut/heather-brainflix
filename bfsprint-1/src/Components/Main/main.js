@@ -25,7 +25,7 @@ export class Main extends Component {
                         <Description mainVideo={this.state.mainvideo}/>
                         <Comments />
                     </div>
-                    <Aside videos={this.state.videos} mainVideo={this.state.mainvideo}/>
+                    <Aside className='main-content-container__aside-videos' videos={this.state.videos} mainVideo={this.state.mainvideo}/>
                 </div>
             </div>
         )

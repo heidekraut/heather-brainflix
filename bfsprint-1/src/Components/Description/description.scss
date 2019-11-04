@@ -42,8 +42,10 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
      display: flex;
      flex-direction: column;
      justify-content: flex-start;
+
      @media screen and (min-width: 1024px){
-         width: 600px;
+         max-width: 560px;
+         flex-grow: 1;
      }
 
      &__title {
