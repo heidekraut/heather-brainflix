@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'avenier-bold';
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Heavy.ttf');
+}
+
+@font-face {
+    font-family: 'avenier-reg';
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf');
+}
+
+@mixin doc-title {
+   font-family: 'avenier-bold';
+   font-size: 2.5rem;
+   text-align: left;
+}
+
+@mixin subtitle {
+   font-family: 'avenier-reg';
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+@mixin label {
+    font-family: 'avenier-reg';
+     font-size: 1rem;
+     text-align: left;
+     text-transform: uppercase;
+     color: #afafaf;
+ }
+
+@mixin bodytext {
+    font-family: 'avenier-reg';
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+    color: #323232;
+}
+
+@mixin input-container {
+    margin: 0.75rem 0rem 2rem 0rem;
+    border: 2px solid #AFAFAF;
+    background-color: #FAFAFA;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+
+@mixin upload-button {
+    background-color: #0095ff;
+    margin: 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+}
+
+@mixin upload-button-tabletplus {
+    background-color: #0095ff;
+    margin: 1rem;
+    color: white;
+    height: 55px;
+    width: 140px;
+    border: none;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+}
+
+@mixin profile-image {
+    //background-image: url(/src/Assets/images/Mohan-muruge.jpg);
+    background-color: black;
+    border-radius: 3rem;
+    margin: 0.25rem;
+    border: none;
+    height: 60px;
+    width: 60px;
+}
+
+$mobile-max: 426px;
+$tablet-max: 1024px;
+$laptop-and-above: (min-width: #{$tablet-max});
+$mobile-size: (max-width: $mobile-max);
+$tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
+
+
+
+
+
+.uploadvideo {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90vw;
+
+    &__title {
+        @include subtitle() ;
+    }
+
+    &__inner-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    &__thumbnail-title {
+        @include label();
+    }
+
+    &__thumbnail-container {
+        width: 120px;
+        height: 100px;
+        background-color: #323232;
+        margin: 1rem 0rem 2rem 0rem;
+    }
+
+    &__preview-image {
+        width: 120px;
+        height: 100px;
+        border-radius: 0.75rem;
+    }
+
+    &__form-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        }
+
+        &__label1, &__label2 {
+            @include label();
+        }
+
+        &__text-container {
+            @include input-container();
+        }
+
+        .second {
+            height: 50px;
+        }
+
+        &__button-publish {
+            @include upload-button();
+            height: 55px;
+        }
+
+        &__button-cancel {
+            @include upload-button();
+            background-color: white;
+            color: #323232;
+            height: 20px;
+            margin-top: 0.5rem;
+        }
+
+
+}
+
+
+

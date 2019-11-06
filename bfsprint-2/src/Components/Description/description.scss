@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'avenier-bold';
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Heavy.ttf');
+}
+
+@font-face {
+    font-family: 'avenier-reg';
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf');
+}
+
+@mixin doc-title {
+   font-family: 'avenier-bold';
+   font-size: 2.5rem;
+   text-align: left;
+}
+
+@mixin subtitle {
+   font-family: 'avenier-reg';
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+@mixin bodytext {
+    font-family: 'avenier-reg';
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+    color: #323232;
+}
+
+$mobile-max: 426px;
+$tablet-max: 1024px;
+$laptop-and-above: (min-width: #{$tablet-max});
+$mobile-size: (max-width: $mobile-max);
+$tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
+
+
+
+.description {
+     margin: 1rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+
+     @media screen and (min-width: 1024px){
+         max-width: 560px;
+         flex-grow: 1;
+     }
+
+     &__title {
+         @include doc-title();
+     }
+
+     &__video-info {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         border-bottom: 1px solid #AFAFAF;
+
+     }
+    
+     &__byline-date-container {
+         display: flex;
+         margin: 1rem 0rem;
+         width: 220px;
+     }
+
+     &__byline {
+        @include subtitle();
+     }
+
+     &__date {
+        color: #AFAFAF;
+        margin-left: 1rem;
+        align-self: center;
+        font-size: 18px;
+     }
+
+     &__social-container {
+         display: flex;
+         padding: 1.5rem 0rem;
+         margin: 0.25rem 0rem;
+         width: 220px;
+     }
+
+     &__views-container, &__likes-container {
+         margin-right: 1rem;
+         font-family: 'avenier-reg';
+         color: #AFAFAF;
+         display: flex;
+     }
+
+     &__views, &__likes {
+         margin-left: 0.5rem;
+         height: 20px;
+     }
+
+     &__paragraph {
+        @include bodytext();
+     }
+
+}
+
+@media screen and (min-width: $laptop-and-above) {
+.description {
+    width: 400px;
+}
+
+}
+

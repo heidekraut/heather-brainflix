@@ -1,0 +1,36 @@
+
+$mobile-max: 426px;
+$tablet-max: 1024px;
+$laptop-and-above: (min-width: #{$tablet-max});
+$mobile-size: (max-width: $mobile-max);
+$tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
+
+@media screen and (max-width: $mobile-max) {
+
+.main-video {
+    width: 100vw;
+    max-height: 300px;
+    background-color: black;
+
+    &__video {
+        max-height: 300px;
+        max-width: 100vw;
+    }
+
+   }
+}
+
+
+   @media screen and (min-width: $mobile-max) {
+
+    .main-video {
+        width: 100vw;
+        max-height: 400px;
+        background-color: black;
+
+    &__video {
+        max-height: 400px;
+    }
+
+   }
+}

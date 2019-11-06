@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'avenier-bold';
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Heavy.ttf');
+}
+
+@font-face {
+    font-family: 'avenier-reg';
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf');
+}
+
+@font-face {
+    font-family: 'avenier-med';
+    src: url('../../Assets/fonts/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Demi.ttf');
+}
+
+@mixin doc-title {
+   font-family: 'avenier-bold';
+   font-size: 2.5rem;
+   text-align: left;
+}
+
+@mixin video-list-title {
+   font-family: 'avenier-med';
+    font-size: 16px;
+    text-align: left;
+}
+
+@mixin bodytext {
+    font-family: 'avenier-reg';
+    font-size: 16px;
+    text-align: left;
+}
+
+$mobile-max: 426px;
+$tablet-max: 1024px;
+$laptop-and-above: (min-width: #{$tablet-max});
+$mobile-size: (max-width: $mobile-max);
+$tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
+
+
+@media screen and (max-width: $mobile-max){
+
+    .video-list { 
+        margin: 1rem;
+
+    &__next-video {
+        text-align: left;
+        margin: 2rem 1rem;
+        text-transform: uppercase;
+        font-family: 'avenier-reg';
+        letter-spacing: 0.5px;
+        color: #afafaf;
+        font-size: 16px;
+    }
+        
+    &__container {
+        display: flex;
+        margin: 1.75rem 1rem;
+    }
+
+    &__info-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0.5rem;
+    }
+    
+    &__title {
+        @include video-list-title();
+        margin: 0rem 0.5rem;
+    }
+
+    &__channel {
+        margin: 0.5rem;
+    }
+
+    &__image {
+        width: 130px;
+        height: 85px;
+        border-radius: 0.5rem;
+    }
+}
+}
+
+    .video-list {
+        display:flex;
+        flex-direction: column;
+        width: 25rem;
+
+        &__next-video {
+            text-align: left;
+            margin: 2rem 1rem;
+            text-transform: uppercase;
+            font-family: 'avenier-reg';
+            letter-spacing: 0.5px;
+            color: #afafaf;
+            font-size: 16px;
+        }
+
+        &__container {
+            display: flex;
+            margin: 1rem;
+        }
+
+        &__info-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 0.5rem;
+        }
+        
+        &__title {
+            @include video-list-title();
+            margin: 0rem 0.5rem;
+        }
+    
+        &__channel {
+            margin: 0.5rem;
+        }
+    
+        &__image {
+            width: 170px;
+            height: 100px;
+            border-radius: 0.5rem;
+        }
+
+    }
+
+
+    @media screen and (min-width: $tablet-max) {
+        .video-list {
+
+            min-width: 22rem;
+            max-width: 50rem;
+            z-index: 1;
+            align-self: flex-start;
+            border-left: 1px solid #afafaf;
+            padding-left: 1rem;
+
+            &__image {
+                width: 120px;
+                height: 80px;
+                border-radius: 0.5rem;
+            }
+
+    }
+    }
+
+
+

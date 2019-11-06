@@ -61,12 +61,6 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
         padding-bottom: 2rem;
         border-bottom: 1px solid #e1e1e1;
 
-        @media screen and (min-width: $tablet-max){
-            .commentsform{
-            width: 600px;
-            }
-        }
-
     &__profile-image-large {
         border-radius: 50%;
         width: 50px;
