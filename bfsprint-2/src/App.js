@@ -11,12 +11,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/uploadvideo" component={UploadVideo} />
+        <Route path="/videos/:id" component={Main} />
       </Switch>
-{/* 
-          <div className="App">
-            <Main/>
-            <UploadVideo />
-          </div> */}
 
     </BrowserRouter>
   );

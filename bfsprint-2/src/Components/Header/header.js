@@ -11,7 +11,9 @@ export class Header extends Component {
         return (
             <header className="header">
 
-                <img className="header__logo" src={Logo} alt="logo"></img>
+                <Link to="/" className="header__logo">
+                 <img src={Logo} alt="logo"></img>
+                </Link>
 
                 <div className="header__inner-container">
                 

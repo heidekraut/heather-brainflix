@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import mainVideo from '../Main/data-main-vid';
 import './video.scss';
 
 export class Video extends Component {

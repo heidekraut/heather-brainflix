@@ -89,8 +89,6 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 
 
 
-
-
 .uploadvideo {
     margin: 0 auto;
     display: flex;
@@ -113,16 +111,13 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
     }
 
     &__thumbnail-container {
-        width: 120px;
-        height: 100px;
-        background-color: #323232;
-        margin: 1rem 0rem 2rem 0rem;
+
     }
 
     &__preview-image {
-        width: 120px;
-        height: 100px;
+        width: 100%;
         border-radius: 0.75rem;
+        margin: 1rem 0rem 2rem 0rem;
     }
 
     &__form-container {
@@ -155,6 +150,42 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
             height: 20px;
             margin-top: 0.5rem;
         }
+
+        @media screen and (min-width: $mobile-max) {
+            
+            &__title {
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid #AFAFAF;
+                font-size: 1.75rem;
+            }
+
+            &__preview-image {
+                max-width: 400px;
+            }
+
+            .textboxes {
+                border-bottom: 1px solid #AFAFAF;
+                margin-bottom: 1rem;
+            }
+
+            &__button-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            &__button-publish {
+                width: 130px;
+            }
+
+            &__button-cancel {
+                width: 130px;
+            }
+
+        }
+            
+        
 
 
 }
