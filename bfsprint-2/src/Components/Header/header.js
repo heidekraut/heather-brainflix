@@ -18,7 +18,7 @@ export class Header extends Component {
                 <div className="header__inner-container">
                 
                     <div className="header__search-bar">
-                        <img className="header__search-icon" src={searchLogo} />
+                        <img className="header__search-icon" src={searchLogo} alt="search bar icon"/>
                         <span className="header__search-txt">Search</span>
                     </div>
 
@@ -35,7 +35,7 @@ export class Header extends Component {
                             </div>
 
                             <div className="header__profile-image-container">
-                                <img className="header__profile-image" src={profileImage}></img>
+                                <img className="header__profile-image" src={profileImage} alt="profile"></img>
                             </div>
                     </div>
 

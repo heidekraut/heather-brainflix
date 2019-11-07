@@ -3,7 +3,6 @@ import './UploadVideo.scss';
 import Header from '../Header/header';
 import './UploadVideo.scss';
 import videoPreview from '../../Assets/images/Upload-video-preview.jpg';
-import { Link } from 'react-router-dom'
 
 export class UploadVideo extends Component {
     render() {

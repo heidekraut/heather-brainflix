@@ -9,9 +9,9 @@ export class Comments extends Component {
                 <h3 className='comments__title'>3 Comments</h3>
 
                 <form className="commentsform">
-                    <img src={profileImage} className="commentsform__profile-image-large"/>
+                    <img src={profileImage} className="commentsform__profile-image-large" alt="profile"/>
                     <section className="commentsform__comment-input-container">
-                    <label for="commentsform__comment-input-area" className="commentsform__heading">Join the Conversation</label>
+                    <label htmlFor="commentsform__comment-input-area" className="commentsform__heading">Join the Conversation</label>
                     <textarea className="comment" id="commentsform__comment-input-area" placeholder="comment here" required></textarea>
                     <button type="submit" className="commentsform__post-button" id="commentsform__submitButton" required>Comment</button>
                     </section>
