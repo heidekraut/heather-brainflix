@@ -12,11 +12,16 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        max-width: 1250px;
+        margin: 0 auto;
 
         &__description-comments {
             flex-grow: 1;
+            margin: 0 auto;
+            max-width: 676px;
         }
 
     }
 
 }
+

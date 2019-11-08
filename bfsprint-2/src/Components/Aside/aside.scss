@@ -38,10 +38,17 @@ $mobile-size: (max-width: $mobile-max);
 $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 
 
+.video-list__container{
+    color: #323232;
+    text-decoration: none;
+}
+
 @media screen and (max-width: $mobile-max){
 
     .video-list { 
         margin: 1rem;
+        
+
 
     &__next-video {
         text-align: left;
@@ -56,6 +63,7 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
     &__container {
         display: flex;
         margin: 1.75rem 1rem;
+        font-display: 'avenier-reg';
     }
 
     &__info-container {
@@ -127,9 +135,8 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 
     @media screen and (min-width: $tablet-max) {
         .video-list {
-
-            min-width: 22rem;
-            max-width: 50rem;
+            flex-grow: 1;
+            max-width: 400px;
             z-index: 1;
             align-self: flex-start;
             border-left: 1px solid #afafaf;
