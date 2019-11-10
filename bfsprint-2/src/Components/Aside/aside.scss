@@ -92,7 +92,7 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
     .video-list {
         display:flex;
         flex-direction: column;
-        width: 25rem;
+        max-width: 25rem;
 
         &__next-video {
             text-align: left;

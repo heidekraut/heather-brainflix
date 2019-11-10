@@ -5,6 +5,16 @@ $laptop-and-above: (min-width: #{$tablet-max});
 $mobile-size: (max-width: $mobile-max);
 $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 
+
+.main-video {
+    display: flex;
+
+
+    &__video {
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: $mobile-max) {
 
 .main-video {

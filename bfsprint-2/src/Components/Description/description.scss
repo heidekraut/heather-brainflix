@@ -59,7 +59,8 @@ $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
      &__byline-date-container {
          display: flex;
          margin: 1rem 0rem;
-         width: 220px;
+         width: 290px;
+         justify-content: space-between;
      }
 
      &__byline {

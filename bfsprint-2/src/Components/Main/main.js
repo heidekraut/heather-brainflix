@@ -51,7 +51,7 @@ export class Main extends Component {
 
 
         return (
-            <div>
+            <div className="main">
                 <Header />
                 <Video mainVideo={this.state.mainvideo} />
                 <div className='main-content-container'>

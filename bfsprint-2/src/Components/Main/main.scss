@@ -5,6 +5,9 @@ $mobile-size: (max-width: $mobile-max);
 $tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
 
 
+.main {
+    overflow: hidden;
+}
 
 @media screen and (min-width: 1024px) {
 
