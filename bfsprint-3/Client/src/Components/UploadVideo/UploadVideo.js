@@ -3,21 +3,32 @@ import './UploadVideo.scss';
 import Header from '../Header/header';
 import './UploadVideo.scss';
 import videoPreview from '../../Assets/images/Upload-video-preview.jpg';
+import axios from 'axios';
 
+const url = 'https://localhost:8090';
 
 
 export class UploadVideo extends Component {
-    // state = {
-    //     uploadedVideo : {}
-    // }
 
-    handlePublish() {
-    // preventDefault();
-
+    handlePublish = (event) => {
+        event.preventDefault()
         console.log("posted");
-        // this.setState({
 
-        // })
+        let inputValueTitle = event.target.title.value; 
+        let inputValueDescription = event.target.description.value; 
+
+        console.log(inputValueDescription, inputValueTitle)
+
+     axios.post(url, {
+        name: inputValueTitle,
+        comment: inputValueDescription,
+       })
+    .then(function (response) {
+        console.log(response.data.name);
+      })
+    .catch(function (error) {
+        console.log(error);
+      });
     }
 
 
@@ -35,18 +46,18 @@ export class UploadVideo extends Component {
                                 <img src={videoPreview} alt="bike" className="uploadvideo__preview-image"></img>
                             </div>
 
-                        <form className="uploadvideo__form">
+                        <form onSubmit={this.handlePublish} className="uploadvideo__form">
                             <section className="uploadvideo__form-container">
                                 <div className="uploadvideo__form-container textboxes">
                                     <label htmlFor="" className="uploadvideo__label1">Title your video</label>
-                                    <textarea className="uploadvideo__text-container" id="" placeholder="Add a title to your video" required></textarea>
+                                    <textarea name="title" className="uploadvideo__text-container" id="" placeholder="Add a title to your video" required></textarea>
 
                                     <label htmlFor="" className="uploadvideo__label2">Add a video Description</label>
-                                    <textarea className="uploadvideo__text-container second" id="" placeholder="Add a description of your video" required></textarea>
+                                    <textarea name="description" className="uploadvideo__text-container second" id="" placeholder="Add a description of your video" required></textarea>
                                 </div>
                                 <div className="uploadvideo__button-container">
-                                    <button onClick={this.handlePublish} className="uploadvideo__button-publish" id="publish-button" required>Publish</button>
-                                    <button className="uploadvideo__button-cancel" id="cancel-publish-button" required>Cancel</button>
+                                    <button value={""} name="publishButton" className="uploadvideo__button-publish" id="01" required>Publish</button>
+                                    <button className="uploadvideo__button-cancel" id="02" required>Cancel</button>
                                 </div>
                             </section>
                         </form>
