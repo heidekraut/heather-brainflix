@@ -1,0 +1,30 @@
+$mobile-max: 426px;
+$tablet-max: 1024px;
+$laptop-and-above: (min-width: #{$tablet-max});
+$mobile-size: (max-width: $mobile-max);
+$tablet-size: (min-width: $mobile-max) and (max-width: $tablet-max);
+
+
+.main {
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-content-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        max-width: 1250px;
+        margin: 0 auto;
+
+        &__description-comments {
+            flex-grow: 1;
+            margin: 0 auto;
+            max-width: 676px;
+        }
+
+    }
+
+}
+
