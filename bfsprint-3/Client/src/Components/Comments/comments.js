@@ -3,8 +3,20 @@ import './comments.scss'
 import profileImage from '../../Assets/images/Mohan-muruge.jpg'
 
 export class Comments extends Component {
+
+
     render() {
+
+        console.log(this.props.mainVideo.comments)
+
+        const commentsObj = this.props.mainVideo.comments
+        console.log(commentsObj)
+
+        const commentArray = this.props.mainVideo.comments.Object.keys(comments).map((i) => comments[i])
+        console.log(commentArray)
+
         return (
+
             <section className="comments">
                 <h3 className='comments__title'>3 Comments</h3>
 
@@ -26,7 +38,7 @@ export class Comments extends Component {
                             <div className="comments__words">
                                 <span className="comments__user-name">Michael Lyons</span>
                                 <span className="comments__post-date">12/06/2019</span>
-                                <p className="comments__comment">They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the best concert opening I have EVER witnessed.</p>
+                                <p className="comments__comment">Comment</p>
                             </div>
 
                         </div>
@@ -43,7 +55,7 @@ export class Comments extends Component {
                             <div className="comments__words">
                                 <span className="comments__user-name">Gary Wong</span>
                                 <span className="comments__post-date">12/18/2019</span>
-                                <p className="comments__comment">Ever time I see him shred I feel so motivated to get off my couch and hop on my board. He's so talented! I wish I can ride like him one day so I can really enjoy myself!</p>
+                                <p className="comments__comment">Comment</p>
                             </div>
 
                         </div>
@@ -59,7 +71,7 @@ export class Comments extends Component {
                             <div className="comments__words">
                                 <span className="comments__user-name">Theodore Duncan</span>
                                 <span className="comments__post-date">12/06/2019</span>
-                                <p className="comments__comment">How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He's definitely my favourite ever!</p>
+                                <p className="comments__comment">Comment</p>
                             </div>
 
                         </div>

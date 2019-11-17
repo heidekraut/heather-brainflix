@@ -5,6 +5,7 @@ import './UploadVideo.scss';
 import videoPreview from '../../Assets/images/Upload-video-preview.jpg';
 import axios from 'axios';
 
+const nanoid = require('nanoid')
 const url = 'https://localhost:8090';
 
 
@@ -12,20 +13,23 @@ export class UploadVideo extends Component {
 
     handlePublish = (event) => {
         event.preventDefault()
-        console.log("posted");
 
         let inputValueTitle = event.target.title.value; 
         let inputValueDescription = event.target.description.value; 
 
-        console.log(inputValueDescription, inputValueTitle)
+        console.log(inputValueDescription, inputValueTitle);
 
-     axios.post(url, {
-        name: inputValueTitle,
-        comment: inputValueDescription,
+
+     axios.post(`${url}/videos`, {
+        id: nanoid,
+        title: inputValueTitle,
+        description: inputValueDescription,
        })
     .then(function (response) {
-        console.log(response.data.name);
-      })
+        console.log(response);
+///redirect to home page 
+
+    })
     .catch(function (error) {
         console.log(error);
       });

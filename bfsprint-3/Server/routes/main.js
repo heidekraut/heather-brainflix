@@ -6,9 +6,7 @@ const postData = require('../data/published-video.json')
 app.use(express.json());
 
 router.get('/', (request, response) => {
-    // const find = mainData
-    // console.log(request.params);
-    // response.json(find);
+
     response.send(mainData);
 });
 
@@ -20,22 +18,22 @@ router.get('/:id', (request, response) => {
 })
 
 
-router.post('/newID', (request, response) => {
+router.post('/', (request, response) => {
 
-// const newObj = {postData}
-console.log(response.body)
+const {id, title, description} = request.body
+const newObj = {
+    id,
+    title,
+    description,
+    likes: "2"
+    
+}
 
-    // console.log(postData)
-//     const videoInfo = request.body    
-//create new object
-// push obj onto new data array
-//     body.psuh
-// use response json 
+console.log(request.body);
 
-// const newDataArray = pos
 
-mainData.push()
-response.json(mainData)
+mainData.push(newObj)
+response.json(newObj)
 });
 
 module.exports = router;

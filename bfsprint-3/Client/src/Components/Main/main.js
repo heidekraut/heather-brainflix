@@ -46,9 +46,6 @@ export class Main extends Component {
 
 
     render() {
-        console.log(this.props.match.params.id);
-        
-
 
         return (
             <div className="main">
@@ -57,7 +54,7 @@ export class Main extends Component {
                 <div className='main-content-container'>
                     <div className='main-content-container__description-comments'>
                         <Description mainVideo={this.state.mainvideo} />
-                        <Comments />
+                        <Comments mainVideo={this.state.mainvideo} />
                     </div>
                     <Aside className='main-content-container__aside-videos' mainVideo={this.state.mainvideo} />
                 </div>
